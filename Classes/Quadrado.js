@@ -23,7 +23,15 @@ class Quadrado {
     }
 }
 
+
+
+
 const quadrado = new Quadrado(11, 12);
 quadrado.duplicarBase();
 quadrado.duplicarAltura();
 console.log(quadrado.calculaArea());
+
+ const divEle = document.querySelector('.resultado');
+console.log(divEle);
+divEle.innerHTML = `<div><p>${quadrado.calculaArea()}</p></div>`;
+divEle.innerHTML = `${quadrado.imprimir()}`
