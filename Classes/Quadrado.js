@@ -5,8 +5,11 @@ class Quadrado {
         this.altura = altura;
         this.cor = undefined;
     }
+
+    calculaArea(){
+        return this.base*this.altura;
+    }
 }
 
 const quadrado = new Quadrado(11, 12);
-quadrado.cor = 'red';
-console.log(quadrado);
+console.log(quadrado.calculaArea());
