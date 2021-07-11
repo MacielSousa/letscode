@@ -9,7 +9,21 @@ class Quadrado {
     calculaArea(){
         return this.base*this.altura;
     }
+    
+    duplicarAltura(){
+        this.altura = this.altura * 2;
+    }
+
+    duplicarBase() {
+        this.base = 2* this.base;
+    }
+
+    imprimir(){
+        return `<div style='width:${this.base}px;height:${this.altura}px;background-color:${this.cor || "blue"}'></div>`
+    }
 }
 
 const quadrado = new Quadrado(11, 12);
+quadrado.duplicarBase();
+quadrado.duplicarAltura();
 console.log(quadrado.calculaArea());
