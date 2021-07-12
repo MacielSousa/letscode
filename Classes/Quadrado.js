@@ -7,7 +7,12 @@ class Quadrado {
     }
 
     get cor() { return this._cor; }
-    set cor(cor) { this._cor = cor }
+    set cor(cor) { 
+        if(cor !== 'red' && cor !== 'green' && cor !== 'blue'){
+            throw 'O valor da propriedade cor deve ser "red", "green" ou "blue"';
+        }
+        this._cor = cor
+     }
 
     calculaArea(){
         return this.base*this.altura;
@@ -41,5 +46,5 @@ class Quadrado {
 
 const quadrado = new Quadrado(3, 4);
 console.log(quadrado.cor);
-quadrado.cor = 'pink';
+quadrado.cor = 'green';
 console.log(quadrado.cor);
