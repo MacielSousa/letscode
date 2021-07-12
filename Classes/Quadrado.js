@@ -1,10 +1,13 @@
 class Quadrado {
     constructor(base, altura){
         if(isNaN(base) || isNaN(altura)) throw 'informação não numérica';
+        this._cor = 'red';
         this.base = base;
         this.altura = altura;
-        this.cor = undefined;
     }
+
+    get cor() { return this._cor; }
+    set cor(cor) { this._cor = cor }
 
     calculaArea(){
         return this.base*this.altura;
@@ -26,12 +29,17 @@ class Quadrado {
 
 
 
-const quadrado = new Quadrado(11, 12);
-quadrado.duplicarBase();
-quadrado.duplicarAltura();
-console.log(quadrado.calculaArea());
+// const quadrado = new Quadrado(11, 12);
+// quadrado.duplicarBase();
+// quadrado.duplicarAltura();
+// console.log(quadrado.calculaArea());
 
- const divEle = document.querySelector('.resultado');
-console.log(divEle);
-divEle.innerHTML = `<div><p>${quadrado.calculaArea()}</p></div>`;
-divEle.innerHTML = `${quadrado.imprimir()}`
+//  const divEle = document.querySelector('.resultado');
+// console.log(divEle);
+// divEle.innerHTML = `<div><p>${quadrado.calculaArea()}</p></div>`;
+// divEle.innerHTML = `${quadrado.imprimir()}`
+
+const quadrado = new Quadrado(3, 4);
+console.log(quadrado.cor);
+quadrado.cor = 'pink';
+console.log(quadrado.cor);
